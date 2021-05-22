@@ -57,7 +57,7 @@ int ParkingSystem::parkNum(int ID){
 	int carType=process.back();
 	
 	if(carType==1)cout<<"Big car ";	//BIG CAR
-	if(carType==2)cout<<"Mid car ";	//Med CAR
+	if(carType==2)cout<<"Med car ";	//Med CAR
 	if(carType==3)cout<<"Small car ";	//small CAR
 	
 	while(process.size()!=1){
