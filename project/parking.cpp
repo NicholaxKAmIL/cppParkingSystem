@@ -70,6 +70,27 @@ int ParkingSystem::parkNum(int ID){
 }
 
 int ParkingSystem::parkCost(int ID){
+	vector<int> process = timeline;
+	int allCarWeHave = carId;
 	
+	while(allCarWeHave != ID){
+		allCarWeHave--;
+		process.pop_back();
+	}
+	//cout<<process.back()<<endl; 
+	int priceOut;
+	if(process.back()==1){
+		cout<<"Big car ";
+		priceOut = price *2;
+	}
+	if(process.back()==2){
+		cout<<"med car ";
+		priceOut = price *1;
+	}
+	if(process.back()==3){
+		cout<<"small car ";
+		priceOut = price /2;
+	}
+	cout<<"parking fee is "<<priceOut<<endl;
 }
 
